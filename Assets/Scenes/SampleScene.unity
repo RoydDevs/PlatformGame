@@ -2363,6 +2363,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 1254787857}
   - {fileID: 774564096}
+  damageOnCollision: 20
   blopAnimator: {fileID: 0}
 --- !u!61 &819808740
 BoxCollider2D:
@@ -2396,7 +2397,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00093984604, y: -0.029971838}
+  m_Offset: {x: -0.00015449524, y: -0.027617335}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2407,7 +2408,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6914263, y: 0.28716898}
+  m_Size: {x: 0.71497154, y: 0.29187799}
   m_EdgeRadius: 0
 --- !u!95 &819808741
 Animator:
@@ -2445,6 +2446,7 @@ GameObject:
   - component: {fileID: 1211966339}
   - component: {fileID: 1211966342}
   - component: {fileID: 1211966343}
+  - component: {fileID: 1211966344}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2553,7 +2555,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00008028746, y: 0.12649351}
+  m_Offset: {x: 0.00008028746, y: 0.05019313}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2564,7 +2566,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9267868, y: 1.0312039}
+  m_Size: {x: 0.9267868, y: 1.1838046}
   m_EdgeRadius: 0.01
 --- !u!50 &1211966340
 Rigidbody2D:
@@ -2670,6 +2672,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1211966344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211966336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb92f66004dfb2b4ea724ca01621d1c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  isInvicible: 0
+  invicibilityTimeAfterHit: 2
+  invicibiltyFlashDelay: 0.2
+  graphics: {fileID: 1211966337}
+  healthBar: {fileID: 1229960625}
 --- !u!1 &1229960622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,6 +2701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1229960623}
   - component: {fileID: 1229960624}
+  - component: {fileID: 1229960625}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -2760,6 +2782,50 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1229960625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229960622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb7d56b34fc3132418dcdfd050da3c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1229960624}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0.9997112, g: 0.19354568, b: 0.03753721, a: 1}
+    key1: {r: 0.99850786, g: 1, b: 0, a: 1}
+    key2: {r: 0.22253835, g: 1, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 21627
+    ctime1: 43253
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 1
+    m_ColorSpace: -1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  fill: {fileID: 1525323203}
 --- !u!1 &1254787856
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,7 +3238,7 @@ Transform:
   m_GameObject: {fileID: 1672083532}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.073, y: 0.124, z: 0}
+  m_LocalPosition: {x: -0.051, y: 0.116, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

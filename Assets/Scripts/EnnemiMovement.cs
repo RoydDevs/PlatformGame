@@ -5,13 +5,15 @@ public class EnnemiMovement : MonoBehaviour
     public float moveSpeed;
     public Transform[] waypoints;
 
+    public int damageOnCollision;
+
     private Transform target;
     private int destPoint;
     public Animator blopAnimator;
 
     void Start()
     {
-        target = waypoints[0];    
+        target = waypoints[0];
     }
 
     void Update()
@@ -26,4 +28,10 @@ public class EnnemiMovement : MonoBehaviour
             transform.Rotate(0, 180, 0);
         }
     }
-}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
+        playerHealth.TakeDamage(damageOnCollision);
+    }
+} 
