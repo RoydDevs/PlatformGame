@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnnemiMovement : MonoBehaviour
+public class EnemiMovement : MonoBehaviour
 {
     public float moveSpeed;
     public Transform[] waypoints;
@@ -9,7 +9,6 @@ public class EnnemiMovement : MonoBehaviour
 
     private Transform target;
     private int destPoint;
-    public Animator blopAnimator;
 
     void Start()
     {
@@ -33,5 +32,16 @@ public class EnnemiMovement : MonoBehaviour
     {
         PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
         playerHealth.TakeDamage(damageOnCollision);
+    }
+
+    public void RemoveColliderOnDeath()
+    {
+        var collider = transform.GetComponent<BoxCollider2D>();
+        Destroy(collider);
+    }
+
+    public void StopEnemi()
+    {
+        moveSpeed = 0;
     }
 } 
