@@ -34313,6 +34313,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemiBlop
       objectReference: {fileID: 0}
+    - target: {fileID: 1471773968962096035, guid: 05a2a8f38b1f58a49916dd90b32c0a8b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.8194444
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471773968962096035, guid: 05a2a8f38b1f58a49916dd90b32c0a8b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.16666667
+      objectReference: {fileID: 0}
     - target: {fileID: 8199805621721246841, guid: 05a2a8f38b1f58a49916dd90b32c0a8b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.636219
@@ -34353,6 +34361,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8777093604202572049, guid: 05a2a8f38b1f58a49916dd90b32c0a8b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1342474220, guid: 9243ed67427d2984e9661559f2e52c62, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
