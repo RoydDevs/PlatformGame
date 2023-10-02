@@ -17,7 +17,7 @@ public class WeakSpot : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            animator.SetFloat("Speed", 0);
+            animator.SetTrigger("IsDead");
             enemyKilled = true;
             enemiMovement.RemoveColliderOnDeath();
             enemiMovement.StopEnemi();

@@ -2209,7 +2209,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint2
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2333,6 +2333,7 @@ MonoBehaviour:
   - {fileID: 1254787857}
   - {fileID: 774564096}
   damageOnCollision: 20
+  animator: {fileID: 0}
 --- !u!61 &819808740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2762,7 +2763,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3186,7 +3187,6 @@ MonoBehaviour:
   enemiDestructionDelayAfterHit: 2
   enemyKilled: 0
   animator: {fileID: 819808741}
-  spriteCrushed: {fileID: 455252877, guid: 9243ed67427d2984e9661559f2e52c62, type: 3}
   enemiMovement: {fileID: 819808739}
 --- !u!61 &1672083535
 BoxCollider2D:
