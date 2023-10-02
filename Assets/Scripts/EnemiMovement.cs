@@ -7,11 +7,14 @@ public class EnemiMovement : MonoBehaviour
 
     public int damageOnCollision;
 
+    public Animator animator;
+
     private Transform target;
     private int destPoint;
 
     void Start()
     {
+        animator.SetFloat("Speed", 1);
         target = waypoints[0];
     }
 
@@ -42,6 +45,7 @@ public class EnemiMovement : MonoBehaviour
 
     public void StopEnemi()
     {
+
         moveSpeed = 0;
     }
 } 

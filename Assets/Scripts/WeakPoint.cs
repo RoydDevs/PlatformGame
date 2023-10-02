@@ -9,6 +9,7 @@ public class WeakSpot : MonoBehaviour
     public float destructionFlashDelay;
     public int enemiDestructionDelayAfterHit;
     public bool enemyKilled;
+    public Animator animator;
 
     public EnemiMovement enemiMovement;
 
@@ -16,6 +17,7 @@ public class WeakSpot : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            animator.SetFloat("Speed", 0);
             enemyKilled = true;
             enemiMovement.RemoveColliderOnDeath();
             enemiMovement.StopEnemi();

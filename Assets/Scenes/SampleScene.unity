@@ -3185,6 +3185,7 @@ MonoBehaviour:
   destructionFlashDelay: 0.2
   enemiDestructionDelayAfterHit: 2
   enemyKilled: 0
+  animator: {fileID: 819808741}
   spriteCrushed: {fileID: 455252877, guid: 9243ed67427d2984e9661559f2e52c62, type: 3}
   enemiMovement: {fileID: 819808739}
 --- !u!61 &1672083535
