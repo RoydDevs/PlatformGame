@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8199805621721246841}
   m_Layer: 0
-  m_Name: EnemiBlop
+  m_Name: EnemyBlop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

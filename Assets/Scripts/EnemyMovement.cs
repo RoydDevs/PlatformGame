@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemiMovement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public float moveSpeed;
     public Transform[] waypoints;
@@ -40,9 +40,8 @@ public class EnemiMovement : MonoBehaviour
         Destroy(collider);
     }
 
-    public void StopEnemi()
+    public void StopEnemy()
     {
-
         moveSpeed = 0;
     }
 } 

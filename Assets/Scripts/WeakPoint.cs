@@ -3,7 +3,7 @@ using System.Collections;
 
 public class WeakSpot : MonoBehaviour
 {
-    public GameObject EnemiToDestroy;
+    public GameObject EnemyToDestroy;
 
     public SpriteRenderer graphics;
     public float destructionFlashDelay;
@@ -11,7 +11,7 @@ public class WeakSpot : MonoBehaviour
     public bool enemyKilled;
     public Animator animator;
 
-    public EnemiMovement enemiMovement;
+    public EnemyMovement enemyMovement;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,10 +19,10 @@ public class WeakSpot : MonoBehaviour
         {
             animator.SetTrigger("IsDead");
             enemyKilled = true;
-            enemiMovement.RemoveColliderOnDeath();
-            enemiMovement.StopEnemi();
+            enemyMovement.RemoveColliderOnDeath();
+            enemyMovement.StopEnemy();
             StartCoroutine(DeathFlash());
-            StartCoroutine(HandleEnemiDestruction());
+            StartCoroutine(HandleEnemyDestruction());
         }
     }
 
@@ -37,9 +37,9 @@ public class WeakSpot : MonoBehaviour
         }
     }
 
-    public IEnumerator HandleEnemiDestruction()
+    public IEnumerator HandleEnemyDestruction()
     {
         yield return new WaitForSeconds(enemiDestructionDelayAfterHit);
-        GameObject.Destroy(EnemiToDestroy);
+        GameObject.Destroy(EnemyToDestroy);
     }
 }
