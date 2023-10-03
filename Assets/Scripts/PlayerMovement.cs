@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
+
     void Update()
     {
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -37,6 +38,11 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
 
+        if (isGrounded && animator.GetBool("IsJumping"))
+		{
+            animator.SetBool("IsJumping", false);
+		}
+
         MovePlayer(horizontalMovement);
     }
 
@@ -48,8 +54,9 @@ public class PlayerMovement : MonoBehaviour
         if (isJumping == true)
         {
             rb.AddForce(new Vector2(0f, jumpForce));
+            animator.SetBool("IsJumping", true);
             isJumping = false;
-        }
+        }   
     }
 
     void Flip(float _velocity)
