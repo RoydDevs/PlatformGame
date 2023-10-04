@@ -24,6 +24,12 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
+    public void ReceiveHealing(int healthCount)
+	{
+        currentHealth += healthCount;
+        healthBar.SetHealth(currentHealth);
+	}
+
     public void TakeDamage(int damage)
     {
         if (!isInvicible)
