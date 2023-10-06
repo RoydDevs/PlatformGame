@@ -2,14 +2,11 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-	private Animator animatorFlag;
-
 	private Transform playerSpawn;
 
 	private void Awake()
 	{
 		playerSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
-		animatorFlag = GameObject.FindGameObjectWithTag("Flag").GetComponent<Animator>();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)

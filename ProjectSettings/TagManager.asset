@@ -8,6 +8,7 @@ TagManager:
   - Coin
   - Hearth
   - PlayerSpawn
+  - Flag
   layers:
   - Default
   - TransparentFX
