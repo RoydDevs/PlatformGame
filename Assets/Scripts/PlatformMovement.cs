@@ -24,4 +24,22 @@ public class PlatformMovement : MonoBehaviour
             target = waypoints[destPoint];
 		}
     }
+
+    //Set player as child of the platform : make it follow the platform movement
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+        if (collision.transform.CompareTag("Player"))
+        {
+            collision.transform.SetParent(transform);
+        }
+	}
+
+    //Remove player as child of the platform
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null); 
+        }
+	}
 }
