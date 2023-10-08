@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlatformMovement : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class PlatformMovement : MonoBehaviour
     private Transform target;
     private int destPoint;
 
-    void Start()
+	void Start()
     {
         target = waypoints[0];
     }
@@ -39,7 +40,10 @@ public class PlatformMovement : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            collision.transform.SetParent(null); 
+            //When remove player from parent --> not send back to DontDestroyOnload
+            collision.transform.SetParent(null);
+            //Add again player in DontDestroyOnLoad scene
+            DontDestroyOnLoad(collision.gameObject);
         }
 	}
 }
