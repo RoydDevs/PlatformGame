@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isJumping;
     public bool isGrounded;
+    public bool isClimbing;
 
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
+    private float verticalMovement;
 
     void Update()
     {
@@ -27,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime;
+        verticalMovement = Input.GetAxis("Vertical") * moveSpeed * Time.fixedDeltaTime;
 
         Flip(rb.velocity.x);
 
@@ -43,20 +46,30 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsJumping", false);
 		}
 
-        MovePlayer(horizontalMovement);
+        MovePlayer(horizontalMovement, verticalMovement);
     }
 
-    void MovePlayer(float _horizontalMovement)
+    void MovePlayer(float _horizontalMovement, float _verticalMovement)
     {
-        Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
-        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+        Vector3 targetVelocity;
 
-        if (isJumping == true)
+        if (!isClimbing)
         {
-            rb.AddForce(new Vector2(0f, jumpForce));
-            animator.SetBool("IsJumping", true);
-            isJumping = false;
-        }   
+            targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+
+            if (isJumping)
+            {
+                rb.AddForce(new Vector2(0f, jumpForce));
+                animator.SetBool("IsJumping", true);
+                isJumping = false;
+            }
+        }
+        else
+		{
+            targetVelocity = new Vector2(rb.velocity.x, _verticalMovement);
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+		}
     }
 
     void Flip(float _velocity)

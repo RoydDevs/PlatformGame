@@ -141,7 +141,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1342474220, guid: 9243ed67427d2984e9661559f2e52c62, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -357,10 +357,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c307578924dcbc4ab6ea4723cc0d0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemiToDestroy: {fileID: 176334662900445752}
+  EnemyToDestroy: {fileID: 0}
   graphics: {fileID: 8777093604202572049}
   destructionFlashDelay: 0.2
   enemiDestructionDelayAfterHit: 2
   enemyKilled: 0
   animator: {fileID: 9169133157356447825}
-  enemiMovement: {fileID: 929250321861225682}
+  enemyMovement: {fileID: 0}
