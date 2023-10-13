@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
+        animator.SetBool("IsClimbing", isClimbing);
     }
 
     void FixedUpdate()
@@ -69,7 +70,8 @@ public class PlayerMovement : MonoBehaviour
 		{
             targetVelocity = new Vector2(0, _verticalMovement);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
-		}
+            animator.SetBool("IsClimbing", true);
+        }
     }
 
     void Flip(float _velocity)
