@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
 		{
-            targetVelocity = new Vector2(rb.velocity.x, _verticalMovement);
+            targetVelocity = new Vector2(0, _verticalMovement);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
 		}
     }
