@@ -4,9 +4,11 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     public float jumpForce;
+    public float climbSpeed;
 
     public bool isJumping;
     public bool isGrounded;
+    [HideInInspector]
     public bool isClimbing;
 
     public Transform groundCheck;
@@ -29,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime;
-        verticalMovement = Input.GetAxis("Vertical") * moveSpeed * Time.fixedDeltaTime;
+        verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.fixedDeltaTime;
 
         Flip(rb.velocity.x);
 
