@@ -30,8 +30,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
-        playerHealth.TakeDamage(damageOnCollision);
+        PlayerHealth.instance.TakeDamage(damageOnCollision);
     }
 
     public void RemoveColliderOnDeath()

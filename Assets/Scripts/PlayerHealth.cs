@@ -13,6 +13,18 @@ public class PlayerHealth : MonoBehaviour
     public SpriteRenderer graphics;
     public HealthBar healthBar;
 
+    public static PlayerHealth instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("There is more than 1 instance of PlayerHealth in the scene");
+        }
+
+        instance = this;
+    }
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -26,7 +38,15 @@ public class PlayerHealth : MonoBehaviour
 
     public void ReceiveHealing(int healthCount)
 	{
-        currentHealth += healthCount;
+        if ((currentHealth + healthCount) > 100)
+		{
+            currentHealth = maxHealth;
+		}
+        else
+		{
+            currentHealth += healthCount;
+		}
+
         healthBar.SetHealth(currentHealth);
 	}
 

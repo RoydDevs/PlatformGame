@@ -14,8 +14,7 @@ public class PickUpObject : MonoBehaviour
 			}
 			else if (transform.CompareTag("Hearth"))
 			{
-				PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
-				playerHealth.ReceiveHealing(hearthHealingCount);
+				PlayerHealth.instance.ReceiveHealing(hearthHealingCount);
 			}
 			Destroy(gameObject);
 		}
