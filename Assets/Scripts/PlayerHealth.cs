@@ -33,7 +33,11 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-
+        //To test
+        if (Input.GetKeyDown(KeyCode.H))
+		{
+            TakeDamage(60);
+		}
     }
 
     public void ReceiveHealing(int healthCount)
@@ -56,11 +60,32 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
+
+            //check health
+            if (currentHealth <= 0)
+			{
+                Die();
+                return;
+			}
+
             isInvicible = true;
             StartCoroutine(InvicibilityFlash());
             StartCoroutine(HandleInvincibilityDelay());
         }
     }
+
+    public void Die()
+	{
+        Debug.Log("Player died");
+        //Stop all player movement
+        PlayerMovement.instance.enabled = false;
+        //Play death animation
+        PlayerMovement.instance.animator.SetTrigger("Die");
+        //Stop gravity etc after death
+        PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
+        //Disabled player collider
+        PlayerMovement.instance.playerColider.enabled = false;
+	}
 
     public IEnumerator InvicibilityFlash()
     {
