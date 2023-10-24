@@ -117,6 +117,7 @@ MonoBehaviour:
   rb: {fileID: 5853753609382561495}
   animator: {fileID: 6533589391570093804}
   spriteRenderer: {fileID: 7885306229604752641}
+  playerColider: {fileID: 3762437137844965480}
 --- !u!50 &5853753609382561495
 Rigidbody2D:
   serializedVersion: 4
