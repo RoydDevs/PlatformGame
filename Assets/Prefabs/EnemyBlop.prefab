@@ -363,4 +363,4 @@ MonoBehaviour:
   enemiDestructionDelayAfterHit: 2
   enemyKilled: 0
   animator: {fileID: 9169133157356447825}
-  enemyMovement: {fileID: 0}
+  enemyMovement: {fileID: 929250321861225682}
