@@ -147,7 +147,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.7083333, y: 0.3611111}
+  m_Size: {x: 0.59, y: 0.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -190,7 +190,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.7083333, y: 0.3611111}
-    newSize: {x: 0.7083333, y: 0.3611111}
+    newSize: {x: 0.59, y: 0.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c307578924dcbc4ab6ea4723cc0d0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyToDestroy: {fileID: 0}
+  EnemyToDestroy: {fileID: 176334662900445752}
   graphics: {fileID: 8777093604202572049}
   destructionFlashDelay: 0.2
   enemiDestructionDelayAfterHit: 2

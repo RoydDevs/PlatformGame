@@ -38,13 +38,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime;
+        verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.fixedDeltaTime;
+
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             isJumping = true;
         }
-
-        horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime;
-        verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.fixedDeltaTime;
 
         Flip(rb.velocity.x);
 
