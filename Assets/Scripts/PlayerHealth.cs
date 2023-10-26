@@ -81,10 +81,12 @@ public class PlayerHealth : MonoBehaviour
         PlayerMovement.instance.enabled = false;
         //Play death animation
         PlayerMovement.instance.animator.SetTrigger("Die");
-        //Stop gravity etc after death
+        //Stop gravity after death
         PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
         //Disabled player collider
         PlayerMovement.instance.playerColider.enabled = false;
+        //Open game over menu
+        GameOverManager.instance.OnPlayerDeath();
 	}
 
     public IEnumerator InvicibilityFlash()
