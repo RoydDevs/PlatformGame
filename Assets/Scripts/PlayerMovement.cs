@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         if (instance != null)
         {
             Debug.LogWarning("There is more than 1 instance of PlayerMovement in the scene");
+            return;
         }
 
         instance = this;

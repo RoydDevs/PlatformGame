@@ -1,14 +1,33 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class DontDestroyOnLoad : MonoBehaviour
+public class DontDestroyOnLoadScene : MonoBehaviour
 {
 	public GameObject[] objects;
 
+	public static DontDestroyOnLoadScene instance;
+
 	private void Awake()
 	{
-		foreach(var element in objects)
+		if (instance != null)
+		{
+			Debug.LogWarning("There is more than 1 instance of DontDestroyOnLoadScene in the scene");
+			return;
+		}
+
+		instance = this;
+
+		foreach (var element in objects)
 		{
 			DontDestroyOnLoad(element);
+		}
+	}
+
+	public void RemoveFromDontDestroyOnLoad()
+	{
+		foreach (var element in objects)
+		{
+			SceneManager.MoveGameObjectToScene(element, SceneManager.GetActiveScene());
 		}
 	}
 }

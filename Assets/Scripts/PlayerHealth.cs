@@ -20,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
         if (instance != null)
         {
             Debug.LogWarning("There is more than 1 instance of PlayerHealth in the scene");
+            return;
         }
 
         instance = this;
@@ -76,7 +77,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
 	{
-        Debug.Log("Player died");
         //Stop all player movement
         PlayerMovement.instance.enabled = false;
         //Play death animation
@@ -88,6 +88,21 @@ public class PlayerHealth : MonoBehaviour
         //Open game over menu
         GameOverManager.instance.OnPlayerDeath();
 	}
+
+    public void Respawn()
+	{
+        //Activate player movement
+        PlayerMovement.instance.enabled = true;
+        //Play animation idle
+        PlayerMovement.instance.animator.SetTrigger("Respawn");
+        //Activate gravity
+        PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Dynamic;
+        //Enable player collider
+        PlayerMovement.instance.playerColider.enabled = true;
+        //Reset player health
+        currentHealth = maxHealth;
+        healthBar.SetHealth(currentHealth);
+    }
 
     public IEnumerator InvicibilityFlash()
     {

@@ -11,6 +11,7 @@ public class PickUpObject : MonoBehaviour
 			if (transform.CompareTag("Coin"))
 			{
 				Inventory.instance.AddCoins(1);
+				CurrentSceneManager.instance.coinsPickedUpCount++;
 			}
 			else if (transform.CompareTag("Hearth"))
 			{
