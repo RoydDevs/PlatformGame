@@ -83,6 +83,8 @@ public class PlayerHealth : MonoBehaviour
         PlayerMovement.instance.animator.SetTrigger("Die");
         //Stop gravity after death
         PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
+        //Fix camera moving if death while runing
+        PlayerMovement.instance.rb.velocity = Vector3.zero;
         //Disabled player collider
         PlayerMovement.instance.playerColider.enabled = false;
         //Open game over menu
