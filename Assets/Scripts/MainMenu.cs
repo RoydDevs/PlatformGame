@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
 	public string levelToLoad;
 
-	public GameObject settingWindow;
+	public GameObject settingsMenuUI;
 
 	public void StartGame()
 	{
@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
 
 	public void Settings()
 	{
-		settingWindow.SetActive(true);
+		settingsMenuUI.SetActive(true);
 	}
 
 	public void QuitGame()
@@ -24,6 +24,6 @@ public class MainMenu : MonoBehaviour
 
 	public void CloseSettings()
 	{
-		settingWindow.SetActive(false);
+		settingsMenuUI.SetActive(false);
 	}
 }
