@@ -155,3 +155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c148801d9e967894a9595f515a92f149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hearthHealingCount: 0
+  coinAudioClip: {fileID: 8300000, guid: 6a86baaab0c9f30439dfbd292fdd6a7f, type: 3}

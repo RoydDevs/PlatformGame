@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbfd373a706b90b4b81f9f3d5156a009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerPresentByDefault: 0
+  isPlayerPresentByDefault: 1
+  coinsPickedUpCount: 0

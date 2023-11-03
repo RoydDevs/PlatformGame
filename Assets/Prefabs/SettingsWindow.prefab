@@ -414,6 +414,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 2b1d24edc2972e14191d1b1f7ac14c13, type: 2}
   resolutionDropdown: {fileID: 6836195029622347914}
+  musicSlider: {fileID: 110479839862343310}
+  soundEffectsSlider: {fileID: 6226534560107256489}
 --- !u!1 &1668814060220692236
 GameObject:
   m_ObjectHideFlags: 0
