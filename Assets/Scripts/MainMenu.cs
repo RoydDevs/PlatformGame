@@ -17,13 +17,18 @@ public class MainMenu : MonoBehaviour
 		settingsMenuUI.SetActive(true);
 	}
 
-	public void QuitGame()
-	{
-		Application.Quit();
-	}
-
 	public void CloseSettings()
 	{
 		settingsMenuUI.SetActive(false);
+	}
+
+	public void Credits()
+	{
+		SceneManager.LoadScene("Credits");
+	}
+
+	public void QuitGame()
+	{
+		Application.Quit();
 	}
 }
