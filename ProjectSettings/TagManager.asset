@@ -9,6 +9,7 @@ TagManager:
   - Hearth
   - PlayerSpawn
   - Flag
+  - InteractUI
   layers:
   - Default
   - TransparentFX

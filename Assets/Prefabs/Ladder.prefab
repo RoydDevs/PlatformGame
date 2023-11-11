@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topCollider: {fileID: 4940813513007917714}
+  interactionUI: {fileID: 0}
 --- !u!1 &7385289714579768683
 GameObject:
   m_ObjectHideFlags: 0

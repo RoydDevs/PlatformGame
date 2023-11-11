@@ -21,7 +21,6 @@ public class SettingsMenu : MonoBehaviour
 		musicSlider.value = musicValueForSlider;
 
 		audioMixer.GetFloat("SoundEffects", out float soundEffectsValueForSlider);
-		Debug.Log(soundEffectsValueForSlider);
 		soundEffectsSlider.value = soundEffectsValueForSlider;
 
 		resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray();
