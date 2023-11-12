@@ -33,7 +33,6 @@ public class AudioManager : MonoBehaviour
     {
         if (!audioSource.isPlaying)
 		{
-            Debug.Log("Next song");
             PlayNextSong();
 		}
     }

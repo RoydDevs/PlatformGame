@@ -39,10 +39,7 @@ public class PlatformMovement : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            //When remove player from parent --> not send back to DontDestroyOnload
             collision.transform.SetParent(null);
-            //Add again player in DontDestroyOnLoad scene
-            DontDestroyOnLoad(collision.gameObject);
         }
 	}
 }
