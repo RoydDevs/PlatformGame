@@ -22,6 +22,11 @@ public class MainMenu : MonoBehaviour
 		settingsMenuUI.SetActive(false);
 	}
 
+	public void LevelSelect()
+	{
+		SceneManager.LoadScene("LevelSelect");
+	}
+
 	public void Credits()
 	{
 		SceneManager.LoadScene("Credits");
