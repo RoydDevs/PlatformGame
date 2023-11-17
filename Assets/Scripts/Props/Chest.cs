@@ -4,17 +4,10 @@ using UnityEngine.UI;
 public class Chest : MonoBehaviour
 {
 	public bool isInRange = false;
-	private Text interactUI;
 
 	public Animator animator;
 	public int coinsToAdd;
 	public AudioClip audioClip;
-
-	private void Awake()
-	{
-		interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
-		interactUI.enabled = false;
-	}
 
 	private void Update()
 	{
@@ -31,7 +24,7 @@ public class Chest : MonoBehaviour
 		AudioManager.instance.PlayClipAt(audioClip, transform.position);
 		//Deactivate the collider to avoid taking 
 		GetComponent<BoxCollider2D>().enabled = false;
-		interactUI.enabled = false;
+		InteractUI.instance.HideInteractUI();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -39,7 +32,7 @@ public class Chest : MonoBehaviour
 		if (collision.CompareTag("Player"))
 		{
 			isInRange = true;
-			interactUI.enabled = true;
+			InteractUI.instance.ShowInteractUI();
 		}
 	}
 
@@ -48,7 +41,7 @@ public class Chest : MonoBehaviour
 		if(collision.CompareTag("Player"))
 		{
 			isInRange = false;
-			interactUI.enabled = false;
+			InteractUI.instance.HideInteractUI();
 		}
 	}
 }
