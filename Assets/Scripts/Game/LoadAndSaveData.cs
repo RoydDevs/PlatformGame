@@ -25,6 +25,11 @@ public class LoadAndSaveData : MonoBehaviour
         //Regedit : Computer\HKEY_CURRENT_USER\SOFTWARE\Unity\UnityEditor\DefaultCompany\Platform Game
         PlayerPrefs.SetInt("coinsCount", Inventory.instance.coinsCount);
         /*PlayerPrefs.SetInt("playerHealth", PlayerHealth.instance.currentHealth);*/
+
+        if(CurrentSceneManager.instance.levelToUnlock > PlayerPrefs.GetInt("levelReached", 1))
+        {
+            PlayerPrefs.SetInt("levelReached", CurrentSceneManager.instance.levelToUnlock);
+        }
 	}
 
     public void LoadData()
