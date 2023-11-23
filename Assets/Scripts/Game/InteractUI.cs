@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class InteractUI : MonoBehaviour
 {
-	private Text interactUI;
+	private GameObject interactUI;
 
 	public static InteractUI instance;
 
@@ -16,17 +16,17 @@ public class InteractUI : MonoBehaviour
 
 		instance = this;
 
-		interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
+		interactUI = GameObject.FindGameObjectWithTag("InteractUI");
 		HideInteractUI();
 	}
 
 	public void HideInteractUI()
 	{
-		interactUI.enabled = false;
+		interactUI.SetActive(false);
 	}
 
 	public void ShowInteractUI()
 	{
-		interactUI.enabled = true;
+		interactUI.SetActive(true);
 	}
 }
