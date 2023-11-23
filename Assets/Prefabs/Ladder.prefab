@@ -92,7 +92,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topCollider: {fileID: 4940813513007917714}
-  interactionUI: {fileID: 0}
 --- !u!1 &7385289714579768683
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +133,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 7385289714579768683}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e16db76496d63094484f8f3aeefcfff1, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
