@@ -80,30 +80,19 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
 	{
-        //Stop all player movement
-        PlayerMovement.instance.enabled = false;
+        PlayerMovement.instance.DisablePlayerInteractions();
         //Play death animation
         PlayerMovement.instance.animator.SetTrigger("Die");
-        //Stop gravity after death
-        PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
-        //Fix camera moving if death while runing
-        PlayerMovement.instance.rb.velocity = Vector3.zero;
-        //Disabled player collider
-        PlayerMovement.instance.playerColider.enabled = false;
         //Open game over menu
         GameOverManager.instance.OnPlayerDeath();
 	}
 
     public void Respawn()
 	{
-        //Activate player movement
-        PlayerMovement.instance.enabled = true;
+        //Stop player interactions
+        PlayerMovement.instance.EnablePlayerInteractions();
         //Play animation idle
         PlayerMovement.instance.animator.SetTrigger("Respawn");
-        //Activate gravity
-        PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Dynamic;
-        //Enable player collider
-        PlayerMovement.instance.playerColider.enabled = true;
         //Reset player health
         currentHealth = maxHealth;
         healthBar.SetHealth(currentHealth);

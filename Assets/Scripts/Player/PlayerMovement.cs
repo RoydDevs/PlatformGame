@@ -105,4 +105,26 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
+
+    public void DisablePlayerInteractions()
+	{
+		//Stop all player movement
+		enabled = false;
+        //Stop gravity
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        //Fix camera moving
+        rb.velocity = Vector3.zero;
+        //Disabled player collider
+        playerColider.enabled = false;
+    }
+
+    public void EnablePlayerInteractions()
+    {
+        //Activate player movement
+        enabled = true;
+        //Activate gravity
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        //Enable player collider
+        playerColider.enabled = true;
+    }
 }
