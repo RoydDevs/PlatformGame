@@ -29,6 +29,8 @@ public class DialogueTrigger : MonoBehaviour
 		{
 			isInRange = false;
 			InteractUI.instance.HideInteractUI();
+			//Remove dialogue if we move
+			DialogueManager.instance.EndDialogue();
 		}
 	}
 
