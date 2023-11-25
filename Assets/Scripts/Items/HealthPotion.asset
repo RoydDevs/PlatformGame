@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: HealthPotion
   m_EditorClassIdentifier: 
   id: 1
-  itemName: Health Potion
+  itemName: Health Item
   description: A potion restoring 20 hp
-  image: {fileID: 21300000, guid: 7041f05192a72264199ee6d8201deb5b, type: 3}
+  image: {fileID: 95360753, guid: 9165151d800b0854a9fe49f2489938a4, type: 3}
   hpGiven: 20
   speedGiven: 0
   speedDuration: 0

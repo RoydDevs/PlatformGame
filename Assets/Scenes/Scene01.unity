@@ -4364,7 +4364,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 789947670646040519, guid: 1bcf6adf72637414bb8d3fce86a06211, type: 3}
       propertyPath: m_Name
-      value: HealthPotion
+      value: HealthItem
       objectReference: {fileID: 0}
     - target: {fileID: 1343685032301063860, guid: 1bcf6adf72637414bb8d3fce86a06211, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4372,7 +4372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1343685032301063860, guid: 1bcf6adf72637414bb8d3fce86a06211, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5508722
+      value: -1.7348722
       objectReference: {fileID: 0}
     - target: {fileID: 1343685032301063860, guid: 1bcf6adf72637414bb8d3fce86a06211, type: 3}
       propertyPath: m_LocalPosition.z
@@ -50714,7 +50714,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3788108210799744688, guid: 8e9aad7a45217034294125ad53341029, type: 3}
       propertyPath: m_Name
-      value: SpeedPotion
+      value: SpeedItem
       objectReference: {fileID: 0}
     - target: {fileID: 3982308416652062165, guid: 8e9aad7a45217034294125ad53341029, type: 3}
       propertyPath: m_LocalPosition.x
@@ -50722,7 +50722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3982308416652062165, guid: 8e9aad7a45217034294125ad53341029, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.546
+      value: -1.73
       objectReference: {fileID: 0}
     - target: {fileID: 3982308416652062165, guid: 8e9aad7a45217034294125ad53341029, type: 3}
       propertyPath: m_LocalPosition.z
