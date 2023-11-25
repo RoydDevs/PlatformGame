@@ -8,10 +8,12 @@ public class Inventory : MonoBehaviour
 	public Text coinsCountText;
 
 	public List<Item> content = new List<Item>();
-	public int contentCurrentIndex = 0;
+	private int contentCurrentIndex = 0;
 	public Image itemImageUI;
 	public Text itemNameUI;
 	public Sprite emptyItemImage;
+
+	public PlayerEffects playerEffects;
 
 	//Singleton --> variable static to be able to access inventory everywhere in the game (and only 1 inventory is authorized)
 	public static Inventory instance;
@@ -40,7 +42,7 @@ public class Inventory : MonoBehaviour
 
 		Item currentItem = content[contentCurrentIndex];
 		PlayerHealth.instance.ReceiveHealing(currentItem.hpGiven);
-		PlayerMovement.instance.moveSpeed += currentItem.speedGiven;
+		playerEffects.AddSpeed(currentItem.speedGiven, currentItem.speedDuration);
 		content.Remove(currentItem);
 		GetNextItem();
 		UpdateInventoryUI();
