@@ -15,6 +15,7 @@ MonoBehaviour:
   id: 2
   itemName: Speed Item
   description: Potion increasing speed by 150 units
+  price: 3
   image: {fileID: -913782546, guid: 9165151d800b0854a9fe49f2489938a4, type: 3}
   hpGiven: 0
   speedGiven: 100

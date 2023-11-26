@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1354823852715335195}
   - component: {fileID: 5995228707921683340}
   - component: {fileID: 3578400013355124614}
+  - component: {fileID: 7318157292924558866}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -62,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
-  settingsMenuUI: {fileID: 1326702421261282778, guid: d704bc6de8616be44b017804e63d5993, type: 3}
+  settingsMenuUI: {fileID: 0}
 --- !u!114 &1354823852715335195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,3 +103,19 @@ MonoBehaviour:
   nameText: {fileID: 0}
   dialogueText: {fileID: 0}
   animator: {fileID: 0}
+--- !u!114 &7318157292924558866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3748636674853358762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44b7aab03110b944a5063c3d9fc104f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcNameText: {fileID: 0}
+  animator: {fileID: 0}
+  sellButtonPrefab: {fileID: 530039258057481358, guid: 5dad65535cdaf474bafc3c1dd5765142, type: 3}
+  sellButtonsParent: {fileID: 0}
