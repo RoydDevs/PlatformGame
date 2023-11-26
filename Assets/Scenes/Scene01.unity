@@ -3998,67 +3998,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1001 &845560730
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 479154032162787744, guid: 90f7c9c659ecb224aa5d3672c57928d9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.256536
-      objectReference: {fileID: 0}
-    - target: {fileID: 479154032162787744, guid: 90f7c9c659ecb224aa5d3672c57928d9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.5609359
-      objectReference: {fileID: 0}
-    - target: {fileID: 479154032162787744, guid: 90f7c9c659ecb224aa5d3672c57928d9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 479154032162787744, guid: 90f7c9c659ecb224aa5d3672c57928d9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 479154032162787744, guid: 90f7c9c659ecb224aa5d3672c57928d9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 479154032162787744, guid: 90f7c9c659ecb224aa5d3672c57928d9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 479154032162787744, guid: 90f7c9c659ecb224aa5d3672c57928d9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 479154032162787744, guid: 90f7c9c659ecb224aa5d3672c57928d9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 479154032162787744, guid: 90f7c9c659ecb224aa5d3672c57928d9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 479154032162787744, guid: 90f7c9c659ecb224aa5d3672c57928d9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1655119572336656460, guid: 90f7c9c659ecb224aa5d3672c57928d9, type: 3}
-      propertyPath: coinsToAdd
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2948562098701719075, guid: 90f7c9c659ecb224aa5d3672c57928d9, type: 3}
-      propertyPath: m_Name
-      value: Chest
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 90f7c9c659ecb224aa5d3672c57928d9, type: 3}
 --- !u!1 &913421400 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646498938965556149, guid: 82efc91871a2017478a98430491e82c7, type: 3}
@@ -50235,6 +50174,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 68549112852972105}
+    - target: {fileID: 7022592514718521999, guid: 82efc91871a2017478a98430491e82c7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022592514718521999, guid: 82efc91871a2017478a98430491e82c7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022592514718521999, guid: 82efc91871a2017478a98430491e82c7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022592514718521999, guid: 82efc91871a2017478a98430491e82c7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022592514718521999, guid: 82efc91871a2017478a98430491e82c7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022592514718521999, guid: 82efc91871a2017478a98430491e82c7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7324819721575900186, guid: 82efc91871a2017478a98430491e82c7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -50977,5 +50940,4 @@ SceneRoots:
   - {fileID: 1596444846367140469}
   - {fileID: 3894533315841986275}
   - {fileID: 4803685834972731685}
-  - {fileID: 845560730}
   - {fileID: 1048554087}
