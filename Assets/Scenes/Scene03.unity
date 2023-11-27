@@ -896,6 +896,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7966281578927308208, guid: 82efc91871a2017478a98430491e82c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1451819381}
+    - target: {fileID: 7966281578927308208, guid: 82efc91871a2017478a98430491e82c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966281578927308208, guid: 82efc91871a2017478a98430491e82c7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8312740692762497704, guid: 82efc91871a2017478a98430491e82c7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -940,11 +952,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 2842581059081728079, guid: 82efc91871a2017478a98430491e82c7, type: 3}
   m_PrefabInstance: {fileID: 357694326}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &357694330 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3471050938189257493, guid: 82efc91871a2017478a98430491e82c7, type: 3}
-  m_PrefabInstance: {fileID: 357694326}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &357694331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 646498938965556149, guid: 82efc91871a2017478a98430491e82c7, type: 3}
@@ -986,7 +993,7 @@ PrefabInstance:
     - target: {fileID: 4556206054376722873, guid: edd3df85edb53e14d806d2891c9f8911, type: 3}
       propertyPath: settingsMenuUI
       value: 
-      objectReference: {fileID: 357694330}
+      objectReference: {fileID: 0}
     - target: {fileID: 9067358368805486313, guid: edd3df85edb53e14d806d2891c9f8911, type: 3}
       propertyPath: gameOverUI
       value: 
